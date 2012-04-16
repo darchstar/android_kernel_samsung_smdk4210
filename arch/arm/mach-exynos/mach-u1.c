@@ -4188,7 +4188,7 @@ static u8 t48_config_e[] = { PROCG_NOISESUPPRESSION_T48,
 	3, 132, 0x40, 0, 0, 0, 0, 0, 10, 15,
 	0, 0, 0, 6, 6, 0, 0, 64, 4, 64,
 	10, 0, 20, 5, 0, 38, 0, 5, 0, 0,	/*byte 27 original value 20 */
-	0, 0, 0, 0, 32, MXT224E_THRESHOLD, 2,
+	0, 0, 0, 0, 32, 50, 2,
 	10,
 	1, 46,
 	MXT224_MAX_MT_FINGERS, 5, 40, 10, 0, 10, 10, 143, 40, 143,
