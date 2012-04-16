@@ -927,9 +927,9 @@ static int sec_bat_check_temper(struct sec_bat_info *info)
 		} else {
 			if ((info->batt_event_status)
 			    || (is_event_end_timer_running(info))) {
-				dev_info(info->dev,
-					 "[NA_SPR] Changed Put off Current",
-					 __func__);
+//				dev_info(info->dev,
+//					 "[NA_SPR] Changed Put off Current",
+//					 __func__);
 				if (temp_radc >= EVENT_BLOCK_TEMP_ADC) {
 					if (health !=
 					    POWER_SUPPLY_HEALTH_OVERHEAT
@@ -2440,7 +2440,7 @@ static void sec_bat_check_event_status(struct sec_bat_info *info, int mode,
 	return;
 }
 
-int sec_bat_use_wimax(int onoff)
+void sec_bat_use_wimax(int onoff)
 {
 	struct sec_bat_info *info = pchg;
 	sec_bat_check_event_status(info, onoff, USE_WIMAX);
@@ -2990,7 +2990,7 @@ static int sec_bat_read_proc(char *buf, char **start,
 
 #ifdef CONFIG_TARGET_LOCALE_NA
 	len = sprintf(buf,
-		      "%lu, %u, %u, %u, %u, %u, %d, %d, %d, %u, %u, %u, %u, %u, %u, %u, %d, %lu\n",
+		      "%lu, %u, %u, %u, %u, %u, %d, %d, %d, %u, %u, %u, %u, %u, %u, %u, %d, %u, %lu\n",
 		      cur_time.tv_sec,
 		      info->batt_raw_soc,
 		      info->batt_soc,
